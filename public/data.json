@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Gold Aviator",
+    "brand": "Aura Premium",
+    "price": 45,
+    "rating": 4.9,
+    "stock": 15,
+    "description": "Premium gold-framed aviators with superior UV400 protection.",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=800",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 2,
+    "name": "Tropical Straw Hat",
+    "brand": "BeachVibe",
+    "price": 18,
+    "rating": 4.3,
+    "stock": 25,
+    "description": "Hand-woven straw hat providing excellent shade for beach days.",
+    "image": "https://images.unsplash.com/photo-1521310173349-166f286821b0?auto=format&fit=crop&q=80&w=800",
+    "category": "Headwear"
+  },
+  {
+    "id": 3,
+    "name": "Retro Film Camera",
+    "brand": "SnapShot",
+    "price": 85,
+    "rating": 4.8,
+    "stock": 10,
+    "description": "Vintage style 35mm film camera to capture your summer memories.",
+    "image": "https://images.unsplash.com/photo-1526170315873-3a98ce50a612?auto=format&fit=crop&q=80&w=800",
+    "category": "Electronics"
+  },
+  {
+    "id": 4,
+    "name": "UV Shield Sunscreen SPF 50",
+    "brand": "SkinGuard",
+    "price": 22,
+    "rating": 4.7,
+    "stock": 40,
+    "description": "Non-greasy, water-resistant sunscreen with high UV protection.",
+    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=800",
+    "category": "Skincare"
+  },
+  {
+    "id": 5,
+    "name": "Oversized Summer T-Shirt",
+    "brand": "Aura Wear",
+    "price": 25,
+    "rating": 4.5,
+    "stock": 30,
+    "description": "100% organic cotton oversized tee for ultimate summer comfort.",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800",
+    "category": "Clothing"
+  },
+  {
+    "id": 6,
+    "name": "Deep Clean Facewash",
+    "brand": "PureGlow",
+    "price": 15,
+    "rating": 4.4,
+    "stock": 50,
+    "description": "Refreshing facewash to remove oil and sweat after a sunny day.",
+    "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=800",
+    "category": "Skincare"
+  },
+  {
+    "id": 7,
+    "name": "Lightweight Sports Jersey",
+    "brand": "Aura Active",
+    "price": 35,
+    "rating": 4.6,
+    "stock": 20,
+    "description": "Breathable dry-fit jersey, perfect for outdoor summer sports.",
+    "image": "https://images.unsplash.com/photo-1580087443155-32be7839634e?auto=format&fit=crop&q=80&w=800",
+    "category": "Clothing"
+  },
+  {
+    "id": 8,
+    "name": "Tortoise Shell Cat-Eye",
+    "brand": "Aura Elite",
+    "price": 38,
+    "rating": 4.8,
+    "stock": 12,
+    "description": "Elegant tortoise shell frames for a bold summer statement.",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&q=80&w=800",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 9,
+    "name": "Canvas Adventure Backpack",
+    "brand": "TrailMate",
+    "price": 55,
+    "rating": 4.7,
+    "stock": 15,
+    "description": "Durable canvas bag for hiking and summer adventures.",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800",
+    "category": "Bags"
+  },
+  {
+    "id": 10,
+    "name": "Instant Polarized Camera",
+    "brand": "SnapShot",
+    "price": 99,
+    "rating": 4.9,
+    "stock": 5,
+    "description": "Get instant prints of your summer vibes with this trendy camera.",
+    "image": "https://images.unsplash.com/photo-1526170160160-1a5eb242ab58?auto=format&fit=crop&q=80&w=800",
+    "category": "Electronics"
+  },
+  {
+    "id": 11,
+    "name": "Floral Summer Jersey",
+    "brand": "IslandStyle",
+    "price": 28,
+    "rating": 4.2,
+    "stock": 18,
+    "description": "Vibrant floral print jersey for a relaxed beach look.",
+    "image": "https://images.unsplash.com/photo-1576566582148-da6a1467926c?auto=format&fit=crop&q=80&w=800",
+    "category": "Clothing"
+  },
+  {
+    "id": 12,
+    "name": "Moisturizing Sun Gel",
+    "brand": "SkinGuard",
+    "price": 20,
+    "rating": 4.6,
+    "stock": 35,
+    "description": "Hydrating aloe-based sun gel for soothing sun-exposed skin.",
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800",
+    "category": "Skincare"
+  }
+]
