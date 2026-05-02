@@ -1,3 +1,3 @@
 import { createAuthClient } from "better-auth/react";
-export const authClient = createAuthClient({ baseURL: "https://vivid-ecommerce-ui9y.vercel.app/" });
+export const authClient = createAuthClient({ baseURL: "http://localhost:3000" });
 export const { signIn, signUp, useSession } = authClient;
