@@ -2,10 +2,11 @@ import React from 'react';
 import { FaStar, FaShieldAlt, FaTruck, FaUndoAlt, FaShoppingCart, FaRegHeart, FaMinus, FaPlus } from 'react-icons/fa';
 import { HiOutlineBadgeCheck } from 'react-icons/hi';
 import Image from 'next/image';
-import { GetAllProduct } from '@/lib/fetch';
+
 import { Chip } from '@heroui/react';
 import AddCard from '@/components/add-card';
 import Byenow from '@/components/bye-now';
+import { GetAllProduct } from '@/components/lib/fetch';
 
 const ProductDetails = async ({ params }) => {
     const { id } = await params;

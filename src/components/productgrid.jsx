@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ProductCard from "./Homeproduct";
-import { GetAllProduct } from "@/lib/fetch";
+import { GetAllProduct } from "@/components/lib/fetch";
 
 
 export async function ProductGrid() {
@@ -21,7 +21,7 @@ export async function ProductGrid() {
                     </Link>
 
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {Allproduct.map((product) => (
                         <ProductCard key={product.id} product={product} />
                     ))}

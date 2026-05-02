@@ -1,13 +1,33 @@
 "use client";
 
 import React from "react";
-
-import { FaUser, FaEnvelope, FaImage, FaLock, FaGoogle, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
-import { Button, Card, CardHeader, Description, FieldError, Input, Label, Separator, TextField } from "@heroui/react";
+import { Button, Card, CardHeader, Description, FieldError, Form, Input, Label, Separator, TextField } from "@heroui/react";
 import { FcGoogle } from "react-icons/fc";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+
 
 const RegisterPage = () => {
+    const router = useRouter()
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        const name = e.target.name.value
+        const image = e.target.image.value
+        const email = e.target.email.value
+        const password = e.target.password.value
+        console.log({ name, image, email, password });
+
+        const { data, error } = await authClient.signUp.email({
+            name, image, email, password
+        });
+        console.log({ data, error });
+        if (!error) {
+            router.push('/')
+        }
+    };
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50/50 px-4 py-12">
             <Card className="max-w-[500px] w-full p-6 shadow-2xl border-none rounded-[2.5rem] bg-white">
@@ -17,7 +37,7 @@ const RegisterPage = () => {
                 </CardHeader>
 
                 <div className="flex flex-col gap-4">
-                    <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+                    <Form className="flex flex-col gap-4" onSubmit={onSubmit} >
                         <TextField isRequired name="name" type="text">
                             <Label>Name</Label>
                             <Input placeholder="Enter your name" />
@@ -74,7 +94,7 @@ const RegisterPage = () => {
                         >
                             Register
                         </Button>
-                    </form>
+                    </Form>
 
                     <div className=" items-center my-3 gap-4">
                         <span className="text-gray-400 text-xl font-extrabold flex justify-center uppercase">Or Continue With</span>

@@ -6,8 +6,24 @@ import { FaGithub, } from "react-icons/fa";
 import Link from "next/link";
 import { Button, Card, CardHeader, Description, FieldError, Form, Input, Label, Separator, TextField } from "@heroui/react";
 import { FcGoogle } from "react-icons/fc";
+import { authClient } from "@/lib/auth-client";
+
 
 const LoginPage = () => {
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        const email = e.target.email.value
+        const password = e.target.password.value
+        console.log({ email, password });
+
+        const { data, error } = await authClient.signIn.email({
+            email, password,
+            callbackURL: "/"
+        });
+        console.log({ data, error });
+
+    };
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50/50 px-4 py-12">
             <Card className="max-w-[450px] w-full p-6 shadow-2xl border-none rounded-[2.5rem] bg-white">
@@ -17,7 +33,7 @@ const LoginPage = () => {
                 </CardHeader>
 
                 <div className="flex flex-col gap-5">
-                    <Form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
+                    <Form className="flex flex-col gap-5" onSubmit={onSubmit}>
                         <TextField
                             isRequired
                             name="email"
