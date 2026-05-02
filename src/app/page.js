@@ -1,5 +1,7 @@
 import Hero from "@/components/Hero";
 import { ProductGrid } from "@/components/productgrid";
+import SummerCareTips from "@/components/SummerCareTips";
+import TopBrands from "@/components/TopBrands";
 
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <div className="">
         <Hero></Hero>
         <ProductGrid></ProductGrid>
+        <SummerCareTips></SummerCareTips>
+        <TopBrands></TopBrands>
     </div>
   );
 }

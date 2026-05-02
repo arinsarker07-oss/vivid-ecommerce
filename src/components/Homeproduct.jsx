@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FaStar, FaRegHeart, FaShoppingCart } from 'react-icons/fa';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import Link from 'next/link';
+import AddCard from './add-card';
 
 
 const ProductCard = ({ product }) => {
@@ -23,6 +24,7 @@ const ProductCard = ({ product }) => {
             {/* Product Image */}
             <div className="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-[#f9f9f9]">
                 <Image
+                    sizes='#'
                     src={product.image}
                     alt={product.name}
                     fill
@@ -31,10 +33,7 @@ const ProductCard = ({ product }) => {
 
                 {/* Quick Add Overlay */}
                 <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
-                    <button className="bg-white text-black font-bold py-3 px-6 rounded-xl flex items-center gap-2 shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 active:scale-95">
-                        <FaShoppingCart size={16} />
-                        Add to Cart
-                    </button>
+                <AddCard></AddCard>
                 </div>
             </div>
 
@@ -62,7 +61,7 @@ const ProductCard = ({ product }) => {
                         <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Price</span>
                         <span className="text-2xl font-black text-gray-900">${product.price}</span>
                     </div>
-                    <Link href={"/products"}>
+                     <Link href={`/products/${product.id}`}>
                         <button className=" p-2 font-bold rounded-2xl bg-gray-900 text-white flex items-center justify-center hover:bg-blue-600 transition-all duration-300 group/btn">
                             View Details
                         </button>

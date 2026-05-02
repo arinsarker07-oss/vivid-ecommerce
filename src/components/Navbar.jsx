@@ -47,7 +47,7 @@ const NavbarPage = () => {
           </div>
           <div className="hidden md:flex items-center gap-4">
             <Link href="/login" className="text-sm font-medium text-gray-700 hover:text-blue-600">Login</Link>
-            <Link href="/register" className="rounded-full bg-blue-600 px-5 py-2 text-sm font-bold text-white transition hover:bg-blue-700">Sign Up</Link>
+            <Link href="/signup" className="rounded-full bg-blue-600 px-5 py-2 text-sm font-bold text-white transition hover:bg-blue-700">Sign Up</Link>
           </div>
         </div>
       </div>

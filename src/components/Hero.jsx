@@ -5,7 +5,7 @@ import { FaArrowRight, FaFireAlt } from 'react-icons/fa';
 
 const Hero = () => {
     return (
-        <section className="relative w-full min-h-[85vh] flex items-center overflow-hidden bg-[#fafafa]">
+        <section className="relative w-full p-10 flex items-center overflow-hidden bg-[#fafafa]">
             <div className="absolute top-[-40%] left-[-10%] w-100 h-72 bg-blue-400 rounded-full blur-3xl opacity-50"></div>
             <div className="absolute bottom-[-40%] right-[-7%] w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-60"></div>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
@@ -63,6 +63,7 @@ const Hero = () => {
                             {/* Main Image */}
                             <div className="relative h-full w-full rounded-[40px] overflow-hidden bg-gradient-to-br from-gray-100 to-white shadow-2xl">
                                 <Image 
+                                    sizes='#'
                                     src="/hero.png" 
                                     alt="Summer Sale Banner"
                                     fill
