@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
     FaFacebookF,
     FaInstagram,
@@ -14,7 +13,7 @@ import FormPage from "./form";
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-[#0a0a0a] text-gray-400 py-16 border-t border-white/5">
+        <footer className="w-full bg-[#0a0a0a] text-gray-500 py-16 border-t border-white/5">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
@@ -87,7 +86,6 @@ const Footer = () => {
                     </div>
 
                 </div>
-
                 <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-[11px] uppercase tracking-[2px] text-gray-500">
                         © 2026 <span className="text-white font-bold">AURA SHOP</span> — Handcrafted in Bangladesh
