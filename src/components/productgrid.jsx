@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ProductCard from "./Homeproduct";
-import { GetAllProduct } from "@/components/lib/fetch";
+import { GetAllProduct } from "./lib/fetch";
+
 
 
 export async function ProductGrid() {

@@ -1,15 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-import { FaGithub, } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub, } from "react-icons/fa";
 import Link from "next/link";
 import { Button, Card, CardHeader, Description, FieldError, Form, Input, Label, Separator, TextField } from "@heroui/react";
 import { FcGoogle } from "react-icons/fc";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 
 const LoginPage = () => {
+const [isVisible, setIsVisible] = useState(false);
+const toggleVisibility = () => setIsVisible(!isVisible);
+console.log(isVisible);
+
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -22,6 +27,30 @@ const LoginPage = () => {
             callbackURL: "/"
         });
         console.log({ data, error });
+        if (!error) {
+            toast.success("Login successfully! 🎉", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        }
+        else {
+            toast.error("Give valid Id", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        }
 
     };
     return (
@@ -56,7 +85,7 @@ const LoginPage = () => {
                                 isRequired
                                 minLength={8}
                                 name="password"
-                                type="password"
+                                type={isVisible ?  "password" : "text"}
                                 validate={(value) => {
                                     if (value.length < 8) {
                                         return "Password must be at least 8 characters";
@@ -70,6 +99,13 @@ const LoginPage = () => {
                             >
                                 <Label>Password</Label>
                                 <Input placeholder="Enter your password" />
+                                <button className="focus:outline-none " type="button" onClick={toggleVisibility}>
+                                    {isVisible ? (
+                                        <FaEyeSlash className="text-2xl text-default-400 pointer-events-none" />
+                                    ) : (
+                                        <FaEye className="text-2xl text-default-400 pointer-events-none" />
+                                    )}
+                                </button>
                                 <Description>
                                     Must be at least 8 characters and 1 number
                                 </Description>

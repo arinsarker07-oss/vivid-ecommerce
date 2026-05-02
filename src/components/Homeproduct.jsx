@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaStar, FaRegHeart, FaShoppingCart } from 'react-icons/fa';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import Link from 'next/link';
 import AddCard from './add-card';
 
