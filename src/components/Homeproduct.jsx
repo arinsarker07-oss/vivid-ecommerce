@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import { FaStar, FaRegHeart, FaShoppingCart } from 'react-icons/fa';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import Link from 'next/link';
 
 
 const ProductCard = ({ product }) => {
+    
     return (
         <div className="group relative bg-blue-50/50 border-2 border-blue-100 rounded-[2rem] p-4 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)]  flex flex-col h-full">
 
@@ -60,10 +62,12 @@ const ProductCard = ({ product }) => {
                         <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Price</span>
                         <span className="text-2xl font-black text-gray-900">${product.price}</span>
                     </div>
+                    <Link href={"/products"}>
+                        <button className=" p-2 font-bold rounded-2xl bg-gray-900 text-white flex items-center justify-center hover:bg-blue-600 transition-all duration-300 group/btn">
+                            View Details
+                        </button>
+                    </Link>
 
-                    <button className="h-12 w-12 rounded-2xl bg-gray-900 text-white flex items-center justify-center hover:bg-blue-600 transition-all duration-300 group/btn">
-                        <HiOutlineArrowNarrowRight size={24} className="group-hover/btn:translate-x-1 transition-transform" />
-                    </button>
                 </div>
             </div>
         </div>
