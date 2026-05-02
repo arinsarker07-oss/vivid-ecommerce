@@ -11,9 +11,9 @@ import { toast } from "react-toastify";
 
 
 const LoginPage = () => {
-const [isVisible, setIsVisible] = useState(false);
-const toggleVisibility = () => setIsVisible(!isVisible);
-console.log(isVisible);
+    const [isVisible, setIsVisible] = useState(false);
+    const toggleVisibility = () => setIsVisible(!isVisible);
+    console.log(isVisible);
 
 
     const onSubmit = async (e) => {
@@ -53,6 +53,12 @@ console.log(isVisible);
         }
 
     };
+
+            const GoogleSignin = async () => {
+            await authClient.signIn.social({
+                provider: "google",
+            });
+        }
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50/50 px-4 py-12">
             <Card className="max-w-[450px] w-full p-6 shadow-2xl border-none rounded-[2.5rem] bg-white">
@@ -85,7 +91,7 @@ console.log(isVisible);
                                 isRequired
                                 minLength={8}
                                 name="password"
-                                type={isVisible ?  "password" : "text"}
+                                type={isVisible ? "password" : "text"}
                                 validate={(value) => {
                                     if (value.length < 8) {
                                         return "Password must be at least 8 characters";
@@ -128,14 +134,14 @@ console.log(isVisible);
                         </Button>
                     </Form>
 
-                    <div className=" items-center my-3 gap-4">
-                        <span className="text-gray-400 text-xl font-extrabold flex justify-center uppercase">Or Continue With</span>
+                    <div className=" items-center my-2 gap-4">
+                        <span className="text-gray-400 font-extrabold flex justify-center uppercase">Or Continue With</span>
                         <Separator variant="default" />
                     </div>
 
-                    <div className="flex gap-4 justify-center">
-                        <Button className={"text-xl font-bold "} variant="outline"> Google <FcGoogle /> </Button>
-                        <Button className={"text-xl font-bold"} variant="secondary">GitHub <FaGithub /></Button>
+                    <div className="flex justify-center">
+                        <Button onClick={GoogleSignin} className={"text-xl font-bold w-full h-12 hover:bg-gray-300"} variant="outline"> Google <FcGoogle /> </Button>
+
                     </div>
 
                     <p className="text-center text-sm text-gray-500 mt-4 font-medium">

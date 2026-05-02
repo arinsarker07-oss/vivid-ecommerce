@@ -11,8 +11,8 @@ import { toast } from "react-toastify";
 
 
 const RegisterPage = () => {
-const [isVisible, setIsVisible] = useState(false);
-const toggleVisibility = () => setIsVisible(!isVisible);
+    const [isVisible, setIsVisible] = useState(false);
+    const toggleVisibility = () => setIsVisible(!isVisible);
 
     const router = useRouter()
     const onSubmit = async (e) => {
@@ -52,6 +52,11 @@ const toggleVisibility = () => setIsVisible(!isVisible);
             });
         }
     };
+            const GoogleSignin = async () => {
+            await authClient.signIn.social({
+                provider: "google",
+            });
+        }
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50/50 px-4 py-12">
@@ -93,7 +98,7 @@ const toggleVisibility = () => setIsVisible(!isVisible);
                             isRequired
                             minLength={8}
                             name="password"
-                            type={isVisible ? "password" :"text" }
+                            type={isVisible ? "password" : "text"}
                             validate={(value) => {
                                 if (value.length < 8) {
                                     return "Password must be at least 8 characters";
@@ -134,8 +139,7 @@ const toggleVisibility = () => setIsVisible(!isVisible);
                     </div>
 
                     <div className="flex gap-4 justify-center">
-                        <Button className={"text-xl font-bold "} variant="outline"> Google <FcGoogle /> </Button>
-                        <Button className={"text-xl font-bold"} variant="secondary">GitHub <FaGithub /></Button>
+                        <Button onClick={GoogleSignin} className={"text-xl font-bold w-full h-12 hover:bg-gray-300"} variant="outline"> Google <FcGoogle /> </Button>
                     </div>
 
                     <p className="text-center text-sm text-gray-500 mt-6 font-medium">
