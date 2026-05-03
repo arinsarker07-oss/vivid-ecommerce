@@ -5,14 +5,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaRegHeart, FaShoppingCart, FaStar } from 'react-icons/fa';
-
+export const metadata = {
+  title: "products",
+  description: "crate by arin",
+};
 const AllProductPage = async () => {
 
     const Allproducts = await GetAllProduct()
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 container mx-auto my-10'>
             {Allproducts.map((product) => (
-        <div key={product.id} className="group relative bg-blue-50/50 border-2 border-blue-100 rounded-[2rem] p-4 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)]  flex flex-col h-full">
+        <div key={product.id} className="group relative dark:bg-white bg-blue-50/50 border-2 border-blue-100 rounded-[2rem] p-4 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)]  flex flex-col h-full">
 
             {/* Badge & Wishlist */}
             <div className="absolute top-6 left-6 z-10">

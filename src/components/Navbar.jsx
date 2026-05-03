@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { authClient } from '@/lib/auth-client';
 import { Avatar, Button } from '@heroui/react';
+import { ThemeSwitcher } from './Themeswich';
 
 const NavbarPage = () => {
   const userdata = authClient.useSession()
@@ -29,10 +30,10 @@ const NavbarPage = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 dark:bg-white backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-
+         <ThemeSwitcher></ThemeSwitcher>
           <div className="flex items-center">
             <Link href="/" className="group flex items-center gap-1">
               <span className="text-2xl font-extrabold tracking-tighter text-black transition group-hover:text-cyan-800">AURA</span>
@@ -63,8 +64,8 @@ const NavbarPage = () => {
             {
               !User ?
                 <>
-                  <Link href="/login" className={`rounded-full px-5 py-2 text-sm font-bold hover:bg-blue-700 ${pathname === "/login" ? "bg-blue-600 text-white" : ""}`}>Login</Link>
-                  <Link href="/signup" className={`rounded-full px-5 py-2 text-sm font-bold hover:bg-blue-700 ${pathname === "/signup" ? "bg-blue-600 text-white" : ""}`}>Sign Up</Link>
+                  <Link href="/login" className={`rounded-full px-5 py-2 text-sm font-bold text-black hover:bg-blue-700 ${pathname === "/login" ? "bg-blue-600 text-white" : ""}`}>Login</Link>
+                  <Link href="/signup" className={`rounded-full px-5 py-2 text-sm font-bold text-black hover:bg-blue-700 ${pathname === "/signup" ? "bg-blue-600 text-white" : ""}`}>Sign Up</Link>
                 </>
                 :
                 <>

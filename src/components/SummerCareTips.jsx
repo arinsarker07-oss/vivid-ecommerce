@@ -30,7 +30,7 @@ const SummerCareTips = () => {
   ];
 
   return (
-    <section className="bg-blue-950 py-20 my-10 container mx-auto rounded-2xl">
+    <section className="bg-blue-900 py-20 my-10 container mx-auto rounded-2xl">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-blue-400 font-bold uppercase tracking-widest text-sm">Expert Advice</span>

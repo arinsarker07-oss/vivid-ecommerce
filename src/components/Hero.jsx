@@ -5,9 +5,9 @@ import { FaArrowRight, FaFireAlt } from 'react-icons/fa';
 
 const Hero = () => {
     return (
-        <section className="relative w-full p-10 flex items-center overflow-hidden bg-[#fafafa]">
+        <section className="relative w-full p-10 flex items-center overflow-hidden ">
             <div className="absolute top-[-40%] left-[-10%] w-100 h-72 bg-blue-400 rounded-full blur-3xl opacity-50"></div>
-            <div className="absolute bottom-[-40%] right-[-7%] w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-60"></div>
+            <div className="absolute bottom-[-45%] right-[-10%] w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-60"></div>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-8 z-10 text-center lg:text-left">
@@ -15,7 +15,7 @@ const Hero = () => {
                             <FaFireAlt className="animate-pulse" />
                             HOT DEALS FOR THIS SEASON
                         </div>
-               <h1 className="text-5xl md:text-7xl font-black text-gray-900 leading-[1.1] tracking-tighter">
+               <h1 className="text-5xl md:text-7xl font-black dark:text-white text-gray-900 leading-[1.1] tracking-tighter">
                             Summer Sale <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
                                 50% OFF
@@ -30,7 +30,7 @@ const Hero = () => {
                         <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                             <Link 
                                 href="/products" 
-                                className="group flex items-center gap-3 bg-gray-900 text-white px-8 py-4 rounded-full font-bold transition-all hover:bg-blue-600 active:scale-95 shadow-xl shadow-gray-200"
+                                className="group flex items-center gap-3 bg-gray-900 text-white px-8 py-4 rounded-full font-bold transition-all hover:bg-blue-600 active:scale-95 "
                             >
                                 Shop Collection
                                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />

@@ -14,7 +14,7 @@ const TopBrands = () => {
     <section className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex justify-between items-end mb-8">
         <div>
-          <h2 className="text-3xl font-black text-gray-900">Top Brands</h2>
+          <h2 className="text-3xl font-black dark:text-white text-gray-900">Top Brands</h2>
           <p className="text-gray-500 mt-2">Explore the world's most trusted eyewear labels.</p>
         </div>
       </div>

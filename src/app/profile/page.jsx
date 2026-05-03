@@ -58,7 +58,7 @@ const ProfilePage = () => {
                     <h1 className="text-4xl font-black text-slate-800 mb-4">Oops!</h1>
                     <p className="text-slate-500 mb-6 font-medium text-lg">Please login to access your profile dashboard.</p>
                     <Link href="/login">
-                        <Button color="primary" variant="shadow" size="lg" className="font-bold border border-gray-500 hover:bg-blue-700 px-8">Login Now</Button>
+                        <Button color="primary" variant="shadow" size="lg" className="font-bold border text-black border-gray-500 hover:bg-blue-700 px-8">Login Now</Button>
                     </Link>
                 </div>
             </div>
@@ -66,8 +66,8 @@ const ProfilePage = () => {
     }
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-50 p-4 font-sans">
-            <Card className="max-w-[400px] w-full shadow-xl border-none bg-white">
+        <div className="flex justify-center items-center min-h-screen  p-4 font-sans">
+            <Card className="max-w-[400px] w-full shadow-xl border-none ">
                 <CardHeader className="flex flex-col gap-3 items-center pb-0 pt-8">
 
                     <div className={`p-0.5 rounded-full border-5 ${user?.emailVerified ? 'border-success' : 'border-warning'}`}>

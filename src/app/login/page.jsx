@@ -81,8 +81,8 @@ const LoginPage = () => {
                                 return null;
                             }}
                         >
-                            <Label>Email</Label>
-                            <Input placeholder="Enter your email" />
+                            <Label className="text-black">Email</Label>
+                            <Input  placeholder="Enter your email" />
                             <FieldError />
                         </TextField>
 
@@ -103,13 +103,13 @@ const LoginPage = () => {
                                     return null;
                                 }}
                             >
-                                <Label>Password</Label>
+                                <Label className="text-black">Password</Label>
                                 <Input placeholder="Enter your password" />
                                 <button className="focus:outline-none " type="button" onClick={toggleVisibility}>
                                     {isVisible ? (
-                                        <FaEyeSlash className="text-2xl text-default-400 pointer-events-none" />
+                                        <FaEyeSlash className="dark:text-black text-2xl text-default-400 pointer-events-none" />
                                     ) : (
-                                        <FaEye className="text-2xl text-default-400 pointer-events-none" />
+                                        <FaEye className="dark:text-black text-2xl text-default-400 pointer-events-none" />
                                     )}
                                 </button>
                                 <Description>
@@ -140,7 +140,7 @@ const LoginPage = () => {
                     </div>
 
                     <div className="flex justify-center">
-                        <Button onClick={GoogleSignin} className={"text-xl font-bold w-full h-12 hover:bg-gray-300"} variant="outline"> Google <FcGoogle /> </Button>
+                        <Button onClick={GoogleSignin} className={"text-xl text-black font-bold w-full h-12 hover:bg-gray-300"} variant="outline"> Google <FcGoogle /> </Button>
 
                     </div>
 

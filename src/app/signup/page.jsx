@@ -69,7 +69,7 @@ const RegisterPage = () => {
                 <div className="flex flex-col gap-4">
                     <Form className="flex flex-col gap-4" onSubmit={onSubmit} >
                         <TextField isRequired name="name" type="text">
-                            <Label>Name</Label>
+                            <Label className="text-black">Name</Label>
                             <Input placeholder="Enter your name" />
                             <FieldError />
                         </TextField>
@@ -85,12 +85,12 @@ const RegisterPage = () => {
                                 return null;
                             }}
                         >
-                            <Label>Email</Label>
+                            <Label className="text-black">Email</Label>
                             <Input placeholder="Enter your email" />
                             <FieldError />
                         </TextField>
                         <TextField isRequired name="image" type="url">
-                            <Label>Image URL</Label>
+                            <Label className="text-black">Image URL</Label>
                             <Input placeholder="Image URL" />
                             <FieldError />
                         </TextField>
@@ -108,13 +108,13 @@ const RegisterPage = () => {
                                 }
                                 return null;
                             }} >
-                            <Label>Password</Label>
+                            <Label className="text-black">Password</Label>
                             <Input placeholder="Enter your password" />
                             <button className="focus:outline-none " type="button" onClick={toggleVisibility}>
                                 {isVisible ? (
-                                    <FaEyeSlash className="text-2xl text-default-400 pointer-events-none" />
+                                    <FaEyeSlash className="dark:text-black text-2xl text-default-400 pointer-events-none" />
                                 ) : (
-                                    <FaEye className="text-2xl text-default-400 pointer-events-none" />
+                                    <FaEye className="dark:text-black text-2xl text-default-400 pointer-events-none" />
                                 )}
                             </button>
                             <Description>
@@ -139,7 +139,7 @@ const RegisterPage = () => {
                     </div>
 
                     <div className="flex gap-4 justify-center">
-                        <Button onClick={GoogleSignin} className={"text-xl font-bold w-full h-12 hover:bg-gray-300"} variant="outline"> Google <FcGoogle /> </Button>
+                        <Button onClick={GoogleSignin} className={"dark:text-black text-xl font-bold w-full h-12 hover:bg-gray-300"} variant="outline"> Google <FcGoogle /> </Button>
                     </div>
 
                     <p className="text-center text-sm text-gray-500 mt-6 font-medium">

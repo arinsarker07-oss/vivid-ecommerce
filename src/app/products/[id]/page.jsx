@@ -7,7 +7,10 @@ import { Chip } from '@heroui/react';
 import AddCard from '@/components/add-card';
 import Byenow from '@/components/bye-now';
 import { GetAllProduct } from '@/components/lib/fetch';
-
+export const metadata = {
+  title: "product Detail",
+  description: "crate by arin",
+};
 const ProductDetails = async ({ params }) => {
     const { id } = await params;
     const productsData = await GetAllProduct()
@@ -22,7 +25,7 @@ const ProductDetails = async ({ params }) => {
     }
 
     return (
-        <div className=" bg-white py-12 px-4 sm:px-6 lg:px-8 mt-10">
+        <div className="  py-12 px-4 sm:px-6 lg:px-8 mt-10">
             <div className="max-w-7xl mx-auto">
                 <div className="lg:grid lg:grid-cols-2 lg:gap-x-12 items-start">
 
@@ -43,7 +46,7 @@ const ProductDetails = async ({ params }) => {
                         <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2 block">
                             {product.brand}
                         </span>
-                        <h1 className="text-4xl font-black text-gray-900 tracking-tight mb-4">
+                        <h1 className="text-4xl font-black dark:text-gray-400 text-gray-900 tracking-tight mb-4">
                             {product.name}
                         </h1>
 
@@ -58,7 +61,7 @@ const ProductDetails = async ({ params }) => {
                         </div>
 
                         <div className="mb-8">
-                            <span className="text-4xl font-black text-gray-900">${product.price}</span>
+                            <span className="text-4xl font-black dark:text-blue-600 text-gray-900">${product.price}</span>
                         </div>
 
                         <p className="text-gray-600 leading-relaxed mb-8 text-lg">

@@ -8,7 +8,7 @@ import AddCard from './add-card';
 const ProductCard = ({ product }) => {
     
     return (
-        <div className="group relative bg-blue-50/50 border-2 border-blue-100 rounded-[2rem] p-4 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)]  flex flex-col h-full">
+        <div className="group relative dark:bg-white bg-blue-50/50 border-2 border-blue-100 rounded-[2rem] p-4 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)]  flex flex-col h-full">
 
             {/* Badge & Wishlist */}
             <div className="absolute top-6 left-6 z-10">

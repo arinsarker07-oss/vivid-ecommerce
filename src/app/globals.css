@@ -1,2 +1,21 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+
+    background-color: white;
+    color: #0f172a;
+  }
+
+  .dark body {
+
+    background-color: #020617; 
+    color: white;
+  }
+input {
+    @apply bg-white text-slate-900 dark:bg-black ;
+}
+}
