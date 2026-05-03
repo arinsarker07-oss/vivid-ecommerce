@@ -105,20 +105,21 @@ const NavbarPage = () => {
             );
           })}
           <hr className="my-2 border-gray-100" />
-          <Link
-            href="/login"
-            className="mt-2 block rounded-md bg-blue-600 px-3 py-3 text-center text-base font-bold text-white"
-            onClick={() => setIsOpen(false)}
-          >
-            Login
-          </Link>
-          <Link
-            href="/signup"
-            className="mt-2 block rounded-md bg-blue-600 px-3 py-3 text-center text-base font-bold text-white"
-            onClick={() => setIsOpen(false)}
-          >
-            Sign Up
-          </Link>
+            {
+              !User ?
+                <>
+                  <Link href="/login" className={`rounded-full px-5 py-2 text-sm font-bold hover:bg-blue-700 ${pathname === "/login" ? "bg-blue-600 text-white" : ""}`}>Login</Link>
+                  <Link href="/signup" className={`rounded-full px-5 py-2 text-sm font-bold hover:bg-blue-700 ${pathname === "/signup" ? "bg-blue-600 text-white" : ""}`}>Sign Up</Link>
+                </>
+                :
+                <>
+                  <Avatar>
+                    <Avatar.Image alt={User?.name[0]} src={User?.image} referrerPolicy='no-referrer' />
+                    <Avatar.Fallback>{User?.name[0]}</Avatar.Fallback>
+                  </Avatar>
+                  <Button onClick={HandleSignout} variant="danger-soft">Log Out</Button>
+                </>
+            }
         </div>
       </div>
     </nav>
