@@ -7,7 +7,7 @@ import { GetAllProduct } from './components/lib/fetch'
 export async function proxy(request) {
     const product = await GetAllProduct()
     const session = await auth.api.getSession({
-        headers: await headers() // you need to pass the headers object.
+        headers: await headers() 
     })
     if (!session) {
         return NextResponse.redirect(new URL('/login', request.url))

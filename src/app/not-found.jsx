@@ -35,7 +35,7 @@ export default function NotFound() {
             href="/"
             className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-purple-400 transition-colors duration-300"
           >
-            Back to Home
+            Back To Home
           </Link>
         </motion.div>
       </motion.div>
