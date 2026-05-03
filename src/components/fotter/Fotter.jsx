@@ -78,7 +78,7 @@ const Footer = () => {
 
                     <div>
                         <h3 className="text-white font-bold mb-6 text-lg tracking-wide">Newsletter</h3>
-                        <p className="text-sm mb-4 leading-relaxed">Subscribe to receive updates on new drops and exclusive discounts.</p>
+                        <p className="text-sm mb-4 leading-relaxed">Subscribe To receive updates on new drops and exclusive discounts.</p>
                         <div className="relative">
                             
                          <FormPage></FormPage>
