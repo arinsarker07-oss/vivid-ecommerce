@@ -33,5 +33,5 @@ This project leverages a powerful stack of modern development tools:
 
 First, clone the repository:
 ```bash
-git clone <your-repository-url>
-cd aura-shop
+git clone https://github.com/arinsarker07-oss/vivid-ecommerce.git
+
