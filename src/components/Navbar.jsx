@@ -3,9 +3,20 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react'; 
+import { Menu, X } from 'lucide-react';
+import { authClient } from '@/lib/auth-client';
+import { Avatar, Button } from '@heroui/react';
 
 const NavbarPage = () => {
+  const userdata = authClient.useSession()
+  const User = userdata.data?.user
+  console.log(User);
+
+  const HandleSignout= async()=>{
+    await authClient.signOut()
+  }
+
+
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -21,7 +32,7 @@ const NavbarPage = () => {
     <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          
+
           <div className="flex items-center">
             <Link href="/" className="group flex items-center gap-1">
               <span className="text-2xl font-extrabold tracking-tighter text-black transition group-hover:text-cyan-800">AURA</span>
@@ -36,11 +47,10 @@ const NavbarPage = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-sm font-medium transition-colors ${
-                      isActive 
-                        ? 'text-blue-600 font-bold underline underline-offset-8' 
-                        : 'text-gray-700 hover:text-blue-600' 
-                    }`}
+                    className={`text-sm font-medium transition-colors ${isActive
+                      ? 'text-blue-600 font-bold underline underline-offset-8'
+                      : 'text-gray-700 hover:text-blue-600'
+                      }`}
                   >
                     {link.name}
                   </Link>
@@ -48,9 +58,23 @@ const NavbarPage = () => {
               })}
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-4">
-            <Link href="/login" className="text-sm font-medium text-gray-700 hover:text-blue-600">Login</Link>
-            <Link href="/signup" className="rounded-full bg-blue-600 px-5 py-2 text-sm font-bold text-white transition hover:bg-blue-700">Sign Up</Link>
+
+          <div className="hidden md:flex items-center gap-1">
+            {
+              !User ?
+                <>
+                  <Link href="/login" className={`rounded-full px-5 py-2 text-sm font-bold hover:bg-blue-700 ${pathname === "/login" ? "bg-blue-600 text-white" : ""}`}>Login</Link>
+                  <Link href="/signup" className={`rounded-full px-5 py-2 text-sm font-bold hover:bg-blue-700 ${pathname === "/signup" ? "bg-blue-600 text-white" : ""}`}>Sign Up</Link>
+                </>
+                :
+                <>
+                  <Avatar>
+                    <Avatar.Image alt={User?.name[0]} src={User?.image} referrerPolicy='no-referrer' />
+                    <Avatar.Fallback>{User?.name[0]}</Avatar.Fallback>
+                  </Avatar>
+                  <Button onClick={HandleSignout} variant="danger-soft">Log Out</Button>
+                </>
+            }
           </div>
           <div className="flex md:hidden">
             <button
@@ -70,12 +94,11 @@ const NavbarPage = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)} 
-                className={`block rounded-md px-3 py-2 text-base font-medium ${
-                  isActive 
-                    ? 'bg-blue-50 text-blue-600' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
-                }`}
+                onClick={() => setIsOpen(false)}
+                className={`block rounded-md px-3 py-2 text-base font-medium ${isActive
+                  ? 'bg-blue-50 text-blue-600'
+                  : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
+                  }`}
               >
                 {link.name}
               </Link>

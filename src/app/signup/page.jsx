@@ -29,7 +29,7 @@ const RegisterPage = () => {
         if (!error) {
             router.push('/')
             toast.success("SignUp successfully! 🎉", {
-                position: "top-right",
+                position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: false,
@@ -41,7 +41,7 @@ const RegisterPage = () => {
         }
         else {
             toast.error("Id Already created! ", {
-                position: "top-right",
+                position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: false,

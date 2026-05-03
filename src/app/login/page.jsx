@@ -29,7 +29,7 @@ const LoginPage = () => {
         console.log({ data, error });
         if (!error) {
             toast.success("Login successfully! 🎉", {
-                position: "top-right",
+                position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: false,
@@ -41,7 +41,7 @@ const LoginPage = () => {
         }
         else {
             toast.error("Give valid Id", {
-                position: "top-right",
+                position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: false,
